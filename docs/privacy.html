@@ -1,12 +1,77 @@
 <!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Privacy Policy — Ahr999 Alerts</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body style="font-family: -apple-system, system-ui, sans-serif; line-height: 1.5; margin: 24px;">
-<pre style="white-space: pre-wrap;">Privacy Policy — Ahr999 Alerts
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Privacy Policy — Ahr999 Alerts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+
+    <meta
+      name="description"
+      content="Privacy Policy — Ahr999 Alerts (Effective Date: January 31, 2026)"
+    />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header (consistent with index.html) -->
+    <header class="header">
+      <div class="container header__inner">
+        <div class="brand">
+          <span class="brand__mark" aria-hidden="true">▦</span>
+          <span class="brand__name">Ahr999 Alerts</span>
+          <span class="pill pill--subtle">Privacy</span>
+        </div>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="./#how">How it works</a>
+          <a class="nav__link" href="./#zones">Zones</a>
+          <a class="nav__link" href="./#demo">Demo</a>
+          <a class="nav__link" href="./#faq">FAQ</a>
+          <a class="nav__link" href="terms.html">Terms</a>
+        </nav>
+
+        <div class="header__actions">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+            <span class="icon" aria-hidden="true">☾</span>
+          </button>
+          <a class="btn btn--primary" href="./#cta">Get notified</a>
+        </div>
+
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">
+          <span aria-hidden="true">≡</span>
+        </button>
+      </div>
+
+      <div class="mobile-nav" id="mobileNav" hidden>
+        <div class="container mobile-nav__inner">
+          <a class="mobile-nav__link" href="./#how">How it works</a>
+          <a class="mobile-nav__link" href="./#zones">Zones</a>
+          <a class="mobile-nav__link" href="./#demo">Demo</a>
+          <a class="mobile-nav__link" href="./#faq">FAQ</a>
+          <a class="mobile-nav__link" href="terms.html">Terms</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Title section -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2>Privacy Policy</h2>
+            <p class="muted">Ahr999 Alerts · Effective Date: January 31, 2026</p>
+          </div>
+
+          <!-- Content card -->
+          <article class="card" style="padding: 18px;">
+            <!-- IMPORTANT: Privacy text below is unchanged. -->
+            <div style="white-space: pre-wrap; line-height: 1.65; color: var(--text);">
+Privacy Policy — Ahr999 Alerts
 Effective Date: January 31, 2026
 
 This Privacy Policy explains how Ahr999 Alerts (the “App”) collects, uses, and shares information when you use the App.
@@ -92,6 +157,38 @@ If you use the App from outside your country, your device may connect to third-p
 10. Changes to This Privacy Policy
 We may update this Privacy Policy from time to time. The “Effective Date” above indicates when the latest version took effect.
 
-</pre>
-</body>
+            </div>
+          </article>
+
+          <!-- Utility links -->
+          <div style="margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
+            <a class="btn btn--ghost" href="./">← Back to home</a>
+            <a class="btn btn--ghost" href="terms.html">Terms of use</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="brand brand--small">
+            <span class="brand__mark" aria-hidden="true">▦</span>
+            <span class="brand__name">Ahr999 Alerts</span>
+          </div>
+          <div class="muted tiny">
+            © <span id="year"></span> funappbuild ·
+            <a href="privacy.html">Privacy</a> ·
+            <a href="terms.html">Terms</a>
+          </div>
+        </div>
+
+        <div class="footer__right tiny muted">
+          Built for GitHub Pages · Lightweight HTML/CSS/JS
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/app.js" defer></script>
+  </body>
 </html>
