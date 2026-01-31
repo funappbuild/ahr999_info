@@ -2,12 +2,454 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=privacy.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ahr999 Alerts</title>
-    <link rel="canonical" href="privacy.html" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <title>Ahr999 Alerts — Daily/Weekly/Monthly Alerts + Simple Suggestion</title>
+
+    <meta
+      name="description"
+      content="Get a scheduled iPhone/iPad notification of today’s Ahr999 index and a simple suggestion: Buy the Bottom, Fixed Investment, or Pause."
+    />
+
+    <!-- Social preview -->
+    <meta property="og:title" content="Ahr999 Alerts" />
+    <meta
+      property="og:description"
+      content="Scheduled Ahr999 alerts and a simple buy/fixed/pause suggestion."
+    />
+    <meta property="og:type" content="website" />
+    <!-- Optional: add /assets/og.png later -->
+    <!-- <meta property="og:image" content="https://funappbuild.github.io/ahr999_info/assets/og.png" /> -->
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/styles.css" />
   </head>
+
   <body>
-    <p>Redirecting… If you are not redirected, <a href="privacy.html">tap here</a>.</p>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="container header__inner">
+        <div class="brand">
+          <span class="brand__mark" aria-hidden="true">▦</span>
+          <span class="brand__name">Ahr999 Alerts</span>
+          <span class="pill pill--subtle">iPhone · iPad</span>
+        </div>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="#how">How it works</a>
+          <a class="nav__link" href="#zones">Zones</a>
+          <a class="nav__link" href="#demo">Demo</a>
+          <a class="nav__link" href="#faq">FAQ</a>
+          <a class="nav__link" href="privacy.html">Privacy</a>
+        </nav>
+
+        <div class="header__actions">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+            <span class="icon" aria-hidden="true">☾</span>
+          </button>
+          <a class="btn btn--primary" href="#cta">Get notified</a>
+        </div>
+
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">
+          <span aria-hidden="true">≡</span>
+        </button>
+      </div>
+
+      <div class="mobile-nav" id="mobileNav" hidden>
+        <div class="container mobile-nav__inner">
+          <a class="mobile-nav__link" href="#how">How it works</a>
+          <a class="mobile-nav__link" href="#zones">Zones</a>
+          <a class="mobile-nav__link" href="#demo">Demo</a>
+          <a class="mobile-nav__link" href="#faq">FAQ</a>
+          <a class="mobile-nav__link" href="privacy.html">Privacy</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <div class="hero__kicker">
+              <span class="dot" aria-hidden="true"></span>
+              <span>One job. Done well.</span>
+            </div>
+
+            <h1 class="hero__title">
+              Scheduled Ahr999 alerts
+              <span class="gradient-text">with a simple suggestion.</span>
+            </h1>
+
+            <p class="hero__subtitle">
+              Get a top-bar notification daily/weekly/monthly at your chosen time.
+              Each alert includes today’s Ahr999 index and a clear suggestion:
+              <strong>Buy the Bottom</strong>, <strong>Fixed Investment</strong>, or <strong>Pause</strong>.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary btn--lg" href="#demo">Try the demo</a>
+              <a class="btn btn--ghost btn--lg" href="#how">See how it works</a>
+            </div>
+
+            <div class="hero__badges" aria-label="Highlights">
+              <div class="badge">
+                <span class="badge__icon" aria-hidden="true">⏰</span>
+                <div class="badge__text">
+                  <div class="badge__title">Time you choose</div>
+                  <div class="badge__desc">Daily · Weekly · Monthly</div>
+                </div>
+              </div>
+              <div class="badge">
+                <span class="badge__icon" aria-hidden="true">🔔</span>
+                <div class="badge__text">
+                  <div class="badge__title">Top-bar notifications</div>
+                  <div class="badge__desc">No need to open the app</div>
+                </div>
+              </div>
+              <div class="badge">
+                <span class="badge__icon" aria-hidden="true">🧭</span>
+                <div class="badge__text">
+                  <div class="badge__title">One clear suggestion</div>
+                  <div class="badge__desc">Based on current Ahr999</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right visual -->
+          <div class="hero__visual" aria-hidden="true">
+            <div class="glass-card">
+              <div class="glass-card__top">
+                <div class="glass-chip">Today</div>
+                <div class="glass-chip glass-chip--ok">Ahr999</div>
+              </div>
+
+              <div class="metric">
+                <div class="metric__label">Current index</div>
+                <div class="metric__value" id="heroIndex">0.92</div>
+              </div>
+
+              <div class="suggestion" id="heroSuggestion">
+                <div class="suggestion__title">Suggestion</div>
+                <div class="suggestion__pill suggestion__pill--buy" id="heroPill">
+                  Buy the Bottom
+                </div>
+                <div class="suggestion__note" id="heroNote">
+                  Strong value zone — consider accumulating.
+                </div>
+              </div>
+
+              <div class="mini">
+                <div class="mini__row">
+                  <span class="mini__label">Frequency</span>
+                  <span class="mini__value">Daily</span>
+                </div>
+                <div class="mini__row">
+                  <span class="mini__label">Time</span>
+                  <span class="mini__value">09:00</span>
+                </div>
+                <div class="mini__row">
+                  <span class="mini__label">Trigger</span>
+                  <span class="mini__value">Any value</span>
+                </div>
+              </div>
+
+              <div class="glass-card__bottom">
+                <span class="muted">Example preview · in-app logic may differ</span>
+              </div>
+            </div>
+
+            <div class="glow glow--a"></div>
+            <div class="glow glow--b"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="section" id="how">
+        <div class="container">
+          <div class="section__head">
+            <h2>How it works</h2>
+            <p class="muted">
+              The app has one capacity: scheduled alerts + a suggestion computed from the current Ahr999 index.
+            </p>
+          </div>
+
+          <div class="steps">
+            <article class="card step">
+              <div class="step__num">1</div>
+              <h3>Choose your schedule</h3>
+              <p>Pick daily, weekly, or monthly — and set the exact time you want the alert.</p>
+            </article>
+
+            <article class="card step">
+              <div class="step__num">2</div>
+              <h3>Choose your trigger</h3>
+              <p>
+                Receive alerts when:
+                <strong>(i)</strong> any Ahr999 value,
+                <strong>(ii)</strong> bottom zone only, or
+                <strong>(iii)</strong> fixed investment zone only.
+              </p>
+            </article>
+
+            <article class="card step">
+              <div class="step__num">3</div>
+              <h3>Get the suggestion</h3>
+              <p>
+                Each notification includes today’s Ahr999 and a clear suggestion:
+                <strong>Buy the Bottom</strong>, <strong>Fixed Investment</strong>, or <strong>Pause</strong>.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ZONES -->
+      <section class="section section--alt" id="zones">
+        <div class="container">
+          <div class="section__head">
+            <h2>Suggestion zones</h2>
+            <p class="muted">
+              You can adjust thresholds inside your app. Below is a simple, transparent model for illustration.
+            </p>
+          </div>
+
+          <div class="zones">
+            <div class="card zone">
+              <div class="zone__top">
+                <span class="pill pill--buy">Buy the Bottom</span>
+                <span class="muted" id="tBuyLabel">≤ 0.45</span>
+              </div>
+              <p class="zone__desc">Deep value conditions — A more aggressive accumulation stance.</p>
+            </div>
+
+            <div class="card zone">
+              <div class="zone__top">
+                <span class="pill pill--fix">Fixed Investment</span>
+                <span class="muted" id="tFixLabel">0.45–1.20</span>
+              </div>
+              <p class="zone__desc">DCA-style zone — steady, disciplined investing may be appropriate.</p>
+            </div>
+
+            <div class="card zone">
+              <div class="zone__top">
+                <span class="pill pill--pause">Pause</span>
+                <span class="muted" id="tPauseLabel">≥ 1.20</span>
+              </div>
+              <p class="zone__desc">Overheated conditions — Reducing or pausing purchases.</p>
+            </div>
+          </div>
+
+          <div class="note">
+            <strong>Note:</strong> Ahr999 isn’t a guarantee. The app provides a simple signal based solely on the current index.
+          </div>
+        </div>
+      </section>
+
+      <!-- DEMO -->
+      <section class="section" id="demo">
+        <div class="container">
+          <div class="section__head">
+            <h2>Interactive demo</h2>
+            <p class="muted">
+              This demo runs in your browser. It shows what users configure and what they might receive.
+            </p>
+          </div>
+
+          <div class="demo">
+            <div class="card demo__panel">
+              <h3 class="demo__title">User preferences</h3>
+
+              <div class="field">
+                <label for="freq">Frequency</label>
+                <select id="freq">
+                  <option value="daily">Daily</option>
+                  <option value="weekly">Weekly</option>
+                  <option value="monthly">Monthly</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="time">Notification time</label>
+                <input id="time" type="time" value="09:00" />
+              </div>
+
+              <div class="field">
+                <label for="trigger">Trigger</label>
+                <select id="trigger">
+                  <option value="any">Any Ahr999 value</option>
+                  <option value="bottom">Only when in Buy the Bottom zone</option>
+                  <option value="fixed">Only when in Fixed Investment zone</option>
+                </select>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="field">
+                <label for="ahr">Current Ahr999 (demo input)</label>
+                <div class="range">
+                  <input id="ahr" type="range" min="0.10" max="2.50" step="0.01" value="0.92" />
+                  <span class="range__value" id="ahrVal">0.92</span>
+                </div>
+              </div>
+
+              <details class="advanced">
+                <summary>Advanced: demo thresholds</summary>
+                <div class="grid2">
+                  <div class="field">
+                    <label for="tBuy">Buy threshold (≤)</label>
+                    <input id="tBuy" type="number" step="0.01" value="0.45" />
+                  </div>
+                  <div class="field">
+                    <label for="tPause">Pause threshold (≥)</label>
+                    <input id="tPause" type="number" step="0.01" value="1.20" />
+                  </div>
+                </div>
+                <p class="muted tiny">
+                  Fixed Investment zone is between Buy threshold and Pause threshold.
+                </p>
+              </details>
+            </div>
+
+            <div class="card demo__result" aria-live="polite">
+              <div class="demo__resultTop">
+                <h3 class="demo__title">Notification preview</h3>
+                <span class="pill pill--subtle" id="nextRun">Next: Daily at 09:00</span>
+              </div>
+
+              <div class="notif">
+                <div class="notif__icon" aria-hidden="true">🔔</div>
+                <div class="notif__body">
+                  <div class="notif__headline">Ahr999 Alerts</div>
+                  <div class="notif__line">
+                    Current Ahr999:
+                    <strong id="nIndex">0.92</strong>
+                    · Suggestion:
+                    <strong id="nSuggestion">Fixed Investment</strong>
+                  </div>
+                  <div class="notif__sub muted" id="nReason">
+                    In the DCA zone — consider steady, consistent investing.
+                  </div>
+                </div>
+              </div>
+
+              <div class="callouts">
+                <div class="callout" id="calloutTrigger">
+                  <div class="callout__title">Will notify?</div>
+                  <div class="callout__value" id="willNotify">Yes</div>
+                </div>
+                <div class="callout">
+                  <div class="callout__title">Zone</div>
+                  <div class="callout__value" id="zoneName">Fixed Investment</div>
+                </div>
+                <div class="callout">
+                  <div class="callout__title">Thresholds</div>
+                  <div class="callout__value" id="threshText">≤0.45 / ≥1.20</div>
+                </div>
+              </div>
+
+              <div class="demo__footer muted tiny">
+                This is only a UX preview. In the app, notifications require user permission and iOS scheduling.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section--cta" id="cta">
+        <div class="container cta">
+          <div class="cta__copy">
+            <h2>Minimal, focused, and actionable.</h2>
+            <p class="muted">
+              Learn more about how we handle data in our
+              <a href="privacy.html">privacy policy</a> and
+              <a href="terms.html">terms of service</a>.
+            </p>
+            <div class="cta__buttons">
+              <a class="btn btn--primary btn--lg" href="privacy.html">View privacy policy</a>
+              <a class="btn btn--ghost btn--lg" href="terms.html">View terms of service</a>
+            </div>
+          </div>
+
+          <div class="cta__card card">
+            <h3>What the app does</h3>
+            <ul class="list">
+              <li>Send scheduled top-bar notifications (daily/weekly/monthly)</li>
+              <li>User chooses time and trigger mode</li>
+              <li>Compute suggestion solely from current Ahr999</li>
+              <li>No extra features, no clutter</li>
+            </ul>
+            <div class="tiny muted">
+              Questions? Add a support page later, e.g. <code>support.html</code>.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section__head">
+            <h2>FAQ</h2>
+            <p class="muted">Short answers to common concerns.</p>
+          </div>
+
+          <div class="faq">
+            <details class="card">
+              <summary>Does the app do anything besides alerts + suggestions?</summary>
+              <p>
+                No — the app’s sole capacity is scheduled notifications and a simple suggestion computed from the
+                current Ahr999 index.
+              </p>
+            </details>
+
+            <details class="card">
+              <summary>What data do you collect?</summary>
+              <p>
+                We use Google Firebase Analytics to understand basic app usage and country/region distribution.
+                No personal data or device identifiers are collected. See our
+                <a href="privacy.html">privacy policy</a> for details.
+              </p>
+            </details>
+
+            <details class="card">
+              <summary>Is this financial advice?</summary>
+              <p>
+                No. It’s an informational signal based on a single index, presented as a simple suggestion.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="brand brand--small">
+            <span class="brand__mark" aria-hidden="true">▦</span>
+            <span class="brand__name">Ahr999 Alerts</span>
+          </div>
+          <div class="muted tiny">
+            © <span id="year"></span> funappbuild ·
+            <a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+
+        <div class="footer__right tiny muted">
+          Built for GitHub Pages · Lightweight HTML/CSS/JS
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/app.js" defer></script>
   </body>
 </html>
+
