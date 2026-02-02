@@ -68,96 +68,167 @@
           </div>
 
           <!-- Content card -->
-          <article class="card" style="padding: 18px;">
-            <!-- IMPORTANT: Privacy text below is unchanged. -->
-            <div style="white-space: pre-wrap; line-height: 1.65; color: var(--text);">
-Privacy Policy — Ahr999 Alerts
-Effective Date: January 31, 2026
+          <article class="card legal">
+            <p class="legal__meta">Effective Date: January 31, 2026</p>
+            <p>
+              This Privacy Policy explains how Ahr999 Alerts (the “App”) collects, uses, and shares information when you use the App.
+            </p>
 
-This Privacy Policy explains how Ahr999 Alerts (the “App”) collects, uses, and shares information when you use the App.
-
-If you have questions, contact:
-funappbuilld@gmail.com
-
-1. Summary
-- The App does not require an account and does not ask you to submit personal information (such as your name, email address, or phone number) to use its core features.
-- The App stores certain settings and cached market/index data locally on your device so it can function.
-- The App uses Google Firebase Analytics to understand basic usage (for example: app launches, screen views, feature interactions) and to understand the distribution of users by country/region. Firebase Analytics may collect device identifiers and technical information as described below.
-- The App fetches Ahr999 and related market data from third-party sources over the internet. Those providers may receive standard network information (such as your IP address) as part of delivering data.
-- The App does not show ads, does not sell your personal information, and does not use the iOS Advertising Identifier (IDFA).
-
-2. Information We Collect
-2.1 Information you provide to us
-We do not require you to create an account. You generally do not submit personal information directly to us through the App.
-
-If you contact us (for example, by email), we will receive the information you choose to share in that communication (such as your email address and message content) and we will use it only to respond and provide support.
-
-2.2 Analytics data (Firebase Analytics)
-We use Google Firebase Analytics to help us understand how the App is used and to improve reliability and user experience.
-
-Firebase Analytics automatically collects certain information, which may include:
-- App interactions and usage data (e.g., app launches, session activity, screen views, and feature interactions).
-- Device and app information (e.g., device model, operating system version, language/region, time zone, and app version).
-- Identifiers used for analytics (e.g., a Firebase App Instance ID / Firebase Installation ID).
-- Approximate location (country/region) inferred from your IP address. We do not request or collect precise location (GPS).
-
-We do not use Firebase Analytics to track you across other companies’ apps and websites, and we do not use IDFA.
-
-Firebase Analytics is provided by Google. Google may process data in accordance with its terms and privacy documentation.
-
-2.3 Information stored on your device (local storage)
-The App stores certain information locally on your device, such as:
-- Notification settings (e.g., whether daily/weekly/monthly alerts are enabled, your chosen times/days, and your “Always / Bottom Only / Not High” preference).
-- Cached Ahr999 index values and timestamps used to display the last refreshed value and to prepare notifications.
-
-This information is stored locally (for example, using iOS UserDefaults). We do not operate a backend user database for this App.
-
-2.4 Data from third-party services (network requests)
-To provide the App’s features, the App requests data from third-party endpoints (for example):
-- Ahr999 index/history feed
-- Bitcoin price feed (used for in-app display)
-
-When your device connects to these providers, they may automatically receive technical information necessary to respond to the request, such as your IP address, device/user-agent information, and request metadata. We do not control how third-party providers handle that information; their policies apply.
-
-3. How We Use Information
-We use the information described above to:
-- Provide the App’s features (display Ahr999 data and send scheduled notifications).
-- Save your preferences and improve reliability (e.g., storing your chosen schedule locally).
-- Understand basic usage and country/region distribution (via Firebase Analytics) to improve the App.
-- Provide customer support if you contact us.
-
-4. Notifications and Background Refresh
-If you enable notifications, the App schedules local notifications on your device. iOS may also perform background refresh to update cached data and notification content.
-
-Important: iOS background activity is best-effort and not guaranteed. Notifications may be delivered with data that was last refreshed earlier (for example, if iOS delays background refresh, if Background App Refresh is disabled, or if the app has not been opened recently). You can always open the App to refresh the latest value.
-
-5. Sharing and Disclosure
-We do not sell your personal information. 
-
-We may share information only in these limited cases:
-- With Google (Firebase Analytics) to collect and process analytics data for the purposes described above.
-- With service providers you interact with directly (e.g., third-party market data APIs) when your device requests data from them.
-- If required by law or to protect rights, safety, and security.
-
-6. Data Retention
-Because the App primarily stores data locally on your device, retention is generally controlled by you:
-- You can remove locally stored data by deleting the App.
-- Analytics data is retained in Firebase Analytics according to Google/Firebase and our configuration settings, and may be aggregated or de-identified over time.
-- Support emails (if you contact us) may be retained as needed to respond and keep records of support interactions.
-
-7. Security
-We take reasonable measures appropriate for a lightweight, device-local app. However, no method of transmission or storage is completely secure.
-
-8. Children’s Privacy
-The App is not directed to children under 13 (or the minimum age required in your jurisdiction), and we do not knowingly collect personal information from children.
-
-9. International Users
-If you use the App from outside your country, your device may connect to third-party services hosted in other regions. Third-party services may process network data in accordance with their policies.
-
-10. Changes to This Privacy Policy
-We may update this Privacy Policy from time to time. The “Effective Date” above indicates when the latest version took effect.
-
+            <div class="legal__contact">
+              <strong>Contact</strong><br />
+              funappbuilld@gmail.com
             </div>
+
+            <nav class="legal__toc" aria-label="Table of contents">
+              <strong>Contents</strong>
+              <ol>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#info">Information We Collect</a></li>
+                <li><a href="#use">How We Use Information</a></li>
+                <li><a href="#notifications">Notifications and Background Refresh</a></li>
+                <li><a href="#sharing">Sharing and Disclosure</a></li>
+                <li><a href="#retention">Data Retention</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#children">Children’s Privacy</a></li>
+                <li><a href="#international">International Users</a></li>
+                <li><a href="#changes">Changes to This Privacy Policy</a></li>
+              </ol>
+            </nav>
+
+            <section class="legal__section" id="summary">
+              <h3>1. Summary</h3>
+              <ul>
+                <li>The App does not require an account and does not ask you to submit personal information (such as your name, email address, or phone number) to use its core features.</li>
+                <li>The App stores certain settings and cached market/index data locally on your device so it can function.</li>
+                <li>The App uses Google Firebase Analytics to understand basic usage (for example: app launches, screen views, feature interactions) and to understand the distribution of users by country/region. Firebase Analytics may collect device identifiers and technical information as described below.</li>
+                <li>The App fetches Ahr999 and related market data from third-party sources over the internet. Those providers may receive standard network information (such as your IP address) as part of delivering data.</li>
+                <li>The App does not show ads, does not sell your personal information, and does not use the iOS Advertising Identifier (IDFA).</li>
+              </ul>
+            </section>
+
+            <section class="legal__section" id="info">
+              <h3>2. Information We Collect</h3>
+
+              <h4>2.1 Information you provide to us</h4>
+              <p>
+                We do not require you to create an account. You generally do not submit personal information directly to us through the App.
+              </p>
+              <p>
+                If you contact us (for example, by email), we will receive the information you choose to share in that communication (such as your email address and message content) and we will use it only to respond and provide support.
+              </p>
+
+              <h4>2.2 Analytics data (Firebase Analytics)</h4>
+              <p>
+                We use Google Firebase Analytics to help us understand how the App is used and to improve reliability and user experience.
+              </p>
+              <p>Firebase Analytics automatically collects certain information, which may include:</p>
+              <ul>
+                <li>App interactions and usage data (e.g., app launches, session activity, screen views, and feature interactions).</li>
+                <li>Device and app information (e.g., device model, operating system version, language/region, time zone, and app version).</li>
+                <li>Identifiers used for analytics (e.g., a Firebase App Instance ID / Firebase Installation ID).</li>
+                <li>Approximate location (country/region) inferred from your IP address. We do not request or collect precise location (GPS).</li>
+              </ul>
+              <p>
+                We do not use Firebase Analytics to track you across other companies’ apps and websites, and we do not use IDFA.
+              </p>
+              <p>
+                Firebase Analytics is provided by Google. Google may process data in accordance with its terms and privacy documentation.
+              </p>
+
+              <h4>2.3 Information stored on your device (local storage)</h4>
+              <p>The App stores certain information locally on your device, such as:</p>
+              <ul>
+                <li>Notification settings (e.g., whether daily/weekly/monthly alerts are enabled, your chosen times/days, and your “Always / Bottom Only / Not High” preference).</li>
+                <li>Cached Ahr999 index values and timestamps used to display the last refreshed value and to prepare notifications.</li>
+              </ul>
+              <p>
+                This information is stored locally (for example, using iOS UserDefaults). We do not operate a backend user database for this App.
+              </p>
+
+              <h4>2.4 Data from third-party services (network requests)</h4>
+              <p>To provide the App’s features, the App requests data from third-party endpoints (for example):</p>
+              <ul>
+                <li>Ahr999 index/history feed</li>
+                <li>Bitcoin price feed (used for in-app display)</li>
+              </ul>
+              <p>
+                When your device connects to these providers, they may automatically receive technical information necessary to respond to the request,
+                such as your IP address, device/user-agent information, and request metadata. We do not control how third-party providers handle that
+                information; their policies apply.
+              </p>
+            </section>
+
+            <section class="legal__section" id="use">
+              <h3>3. How We Use Information</h3>
+              <ul>
+                <li>Provide the App’s features (display Ahr999 data and send scheduled notifications).</li>
+                <li>Save your preferences and improve reliability (e.g., storing your chosen schedule locally).</li>
+                <li>Understand basic usage and country/region distribution (via Firebase Analytics) to improve the App.</li>
+                <li>Provide customer support if you contact us.</li>
+              </ul>
+            </section>
+
+            <section class="legal__section" id="notifications">
+              <h3>4. Notifications and Background Refresh</h3>
+              <p>
+                If you enable notifications, the App schedules local notifications on your device. iOS may also perform background refresh to update
+                cached data and notification content.
+              </p>
+              <p>
+                <strong>Important:</strong> iOS background activity is best-effort and not guaranteed. Notifications may be delivered with data that was
+                last refreshed earlier (for example, if iOS delays background refresh, if Background App Refresh is disabled, or if the app has not been
+                opened recently). You can always open the App to refresh the latest value.
+              </p>
+            </section>
+
+            <section class="legal__section" id="sharing">
+              <h3>5. Sharing and Disclosure</h3>
+              <p>We do not sell your personal information.</p>
+              <p>We may share information only in these limited cases:</p>
+              <ul>
+                <li>With Google (Firebase Analytics) to collect and process analytics data for the purposes described above.</li>
+                <li>With service providers you interact with directly (e.g., third-party market data APIs) when your device requests data from them.</li>
+                <li>If required by law or to protect rights, safety, and security.</li>
+              </ul>
+            </section>
+
+            <section class="legal__section" id="retention">
+              <h3>6. Data Retention</h3>
+              <p>Because the App primarily stores data locally on your device, retention is generally controlled by you:</p>
+              <ul>
+                <li>You can remove locally stored data by deleting the App.</li>
+                <li>Analytics data is retained in Firebase Analytics according to Google/Firebase and our configuration settings, and may be aggregated or de-identified over time.</li>
+                <li>Support emails (if you contact us) may be retained as needed to respond and keep records of support interactions.</li>
+              </ul>
+            </section>
+
+            <section class="legal__section" id="security">
+              <h3>7. Security</h3>
+              <p>
+                We take reasonable measures appropriate for a lightweight, device-local app. However, no method of transmission or storage is completely secure.
+              </p>
+            </section>
+
+            <section class="legal__section" id="children">
+              <h3>8. Children’s Privacy</h3>
+              <p>
+                The App is not directed to children under 13 (or the minimum age required in your jurisdiction), and we do not knowingly collect personal information from children.
+              </p>
+            </section>
+
+            <section class="legal__section" id="international">
+              <h3>9. International Users</h3>
+              <p>
+                If you use the App from outside your country, your device may connect to third-party services hosted in other regions. Third-party services may process network data in accordance with their policies.
+              </p>
+            </section>
+
+            <section class="legal__section" id="changes">
+              <h3>10. Changes to This Privacy Policy</h3>
+              <p>
+                We may update this Privacy Policy from time to time. The “Effective Date” above indicates when the latest version took effect.
+              </p>
+            </section>
           </article>
 
           <!-- Utility links -->
