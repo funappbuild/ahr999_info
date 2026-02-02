@@ -54,6 +54,9 @@ body {
   background: radial-gradient(1200px 700px at 20% 10%, rgba(124, 92, 255, 0.18), transparent 60%),
     radial-gradient(900px 600px at 90% 25%, rgba(32, 211, 255, 0.16), transparent 55%),
     linear-gradient(180deg, var(--bg), var(--bg2));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 a {
@@ -915,6 +918,64 @@ details p {
 }
 
 /* ------------------------------
+   Legal pages
+-------------------------------- */
+.legal {
+  display: grid;
+  gap: 16px;
+  line-height: 1.7;
+  padding: 22px 26px;
+}
+
+.legal__meta {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.legal__contact {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.legal__toc {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--card2);
+  border: 1px solid var(--border);
+}
+
+.legal__toc ol {
+  margin: 8px 0 0 18px;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.legal__section h3 {
+  margin: 18px 0 8px;
+  font-size: 1.05rem;
+}
+
+.legal__section h4 {
+  margin: 14px 0 6px;
+  font-size: 0.98rem;
+  color: var(--text);
+}
+
+.legal__section p {
+  margin: 6px 0 10px;
+}
+
+.legal__section ul {
+  margin: 6px 0 12px 20px;
+}
+
+/* ------------------------------
    Responsive
 -------------------------------- */
 @media (max-width: 980px) {
@@ -949,4 +1010,3 @@ details p {
     animation: none !important;
   }
 }
-
